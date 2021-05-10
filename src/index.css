@@ -1,13 +1,154 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: linear-gradient(
+    rgba(48, 16, 255, 1) 0%,
+    rgb(124, 136, 251) 100%
+  );
+  padding: 50px;
+  min-height: 100vh;
+  display: flex;
+  overflow: hidden;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.login-head {
+  font-weight: 500;
+  margin-top: 5;
+  font-size:xx-large;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+body, html, .App, #root, .auth-wrapper {
+  width: 100%;
+
+}
+
+.auth-inner {
+  width: 450px;
+  margin: auto;
+  /* background: #ffffff; */
+  background: linear-gradient(
+    rgba(48, 16, 255, 1) 0%,
+    rgb(124, 136, 251) 0%
+  );
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  padding: 40px 55px 45px 55px;
+  border-radius: 15px;
+  transition: all .3s ease;
+}
+
+.form-control:focus {
+  border-color: #167bff;
+  box-shadow: none;
+}
+
+.custom-control-label {
+  font-weight: 400;
+}
+
+.input-group-prepend {
+  position: absolute;
+  width: 100%;
+  padding: 10px;
+}
+
+.fa-user {
+  width: 100%;
+}
+
+.error {
+  color:#db2269;
+  float: left;
+  font-size: 0.8em;
+  display: relative;
+}
+
+label {
+  float: left;
+  display: block;
+}
+
+.form-group {
+  padding: 10px;
+  display: block;
+  padding: 5px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  width: 200px;
+}
+
+input[name = "email"] {
+  padding: 5px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  width: 200px;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  outline: none;
+}
+
+input[name = "password"] {
+  padding: 5px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  width: 200px;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  outline: none;
+}
+
+.button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  margin-top: 0;
+  text-align: center;
+  border: 2px solid black;
+  color: black;
+  font-weight: bold;
+  background-color: rgb(0, 153, 255);
+  display: inline-block;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease-in; 
+}
+
+.button:hover {
+  outline: none;
+  background-color:rgb(150, 201, 235);
+  
+}
+
+.button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.borderError {
+  border-color: red;
+  padding: 5px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  width: 200px;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+}
+
+.borderError:focus {
+  outline: none;
 }

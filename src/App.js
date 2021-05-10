@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
+import Login from "./Login";
+import TodoList from './TodoList';
+import './todo.css'
 
 function App() {
-  return (
+  
+  return (<Router>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <div className="container">
+          <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+          </div>
+        </div>
+
+      <div className="auth-wrapper">
+          <Switch>
+            <Route exact path='/' component={Login} />
+            <Route path="/sign-in" component={Login} />
+            <TodoList />
+          </Switch>
+      </div>
+    </div></Router>
   );
 }
 

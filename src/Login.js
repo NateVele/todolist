@@ -88,7 +88,7 @@ export default class Login extends Component {
         form.append('email', this.refs.email.value);
         form.append('password', this.refs.password.value);
 
-        let myfetch = await fetch('http://dev.rapptrlabs.com/Tests/scripts/user-login.php', {
+        let myfetch = await fetch('http://dev.**********.com/Tests/scripts/user-login.php', {
             method: 'POST',
 
             body: form
@@ -121,13 +121,13 @@ export default class Login extends Component {
         return (
             <div className="auth-inner">
             <form onSubmit={this.handleSubmit} noValidate>
-                <h3 className="login-head">Rapptr Labs</h3>
+                <h3 className="login-head">Login</h3>
 
                 <div className="form-group">
                     <div className="email">
                         <label htmlFor="email">Email address</label>
                         <input type="email" id="in1" ref="email" className={errors.email.length > 0 ? 'borderError' : 'form-control'} 
-                        name="email" placeholder="user@rapptrlabs.com" 
+                        name="email" placeholder="user@**********.com" 
                         onChange={this.handleChange} onKeyPress={this.onKeyPress} noValidate required/> 
                         {errors.email.length > 0 && <span className="error">{errors.email}</span>}
                     </div>

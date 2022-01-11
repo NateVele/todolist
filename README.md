@@ -1,11 +1,11 @@
 5/10/2021
 
-This app was written by Nathaniel Vele for Rapptr Labs.
+This app was written by Nathaniel Vele.
 
 This app is written in React and its functionality includes the following:
 
 Login Page - The user can enter information to attempt to login to the TODO site.
-    The page self-validates on change and after validation sends a request to the Rapptr Labs
+    The page self-validates on change and after validation sends a request to a private
     API to login, given that the credentials are correct. The user information is also stored in 
     session storage.
 
